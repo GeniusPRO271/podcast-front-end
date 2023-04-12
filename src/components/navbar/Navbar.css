@@ -8,9 +8,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  margin: 0px 40px;
+  margin: 20px 40px;
   margin-top: 24px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -36,7 +35,7 @@
 }
 
 .nav-links li a:hover {
-  color: #666;
+  color: #ff3b56;
 }
 
 .login a {
@@ -46,55 +45,72 @@
   font-weight: 500;
   border: 2px solid #333;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
 .login a:hover {
   color: #fff;
   background-color: #333;
 }
-
-.toggle_button {
+.navbar_mobile {
   display: none;
+  font-family: 'Jockey One', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin: 0px 40px;
+  margin-top: 24px;
 }
-
+.logo_mobile img {
+  height: 53px;
+}
+.toggle_icon:hover {
+  color: #ff3b56;
+}
 .toggle_icon {
   color: white;
 }
+
 .toggle_content {
   width: 100%;
-  max-height: 200px;
+  height: 0px;
   background-color: transparent;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
-
 .nav-links_mobile {
+  font-family: 'Jockey One', sans-serif;
+  display: block;
+  justify-content: start;
+  width: 100%;
+  padding: 10px;
+  list-style: none;
+}
+.nav-links_mobile li a {
+  color: white;
+  opacity: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  padding-left: 32px;
+  transition: opacity 0.3s ease-in;
+}
+.nav-links_mobile li a:hover {
+  color: #ff3b56;
+}
+.navbar_mobile_content {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .nav-links_mobile {
-    font-family: 'Jockey One', sans-serif;
-    display: block;
-    justify-content: start;
-    width: 100%;
-    padding: 10px;
-    list-style: none;
+  .navbar_mobile {
+    display: flex;
   }
-  .nav-links_mobile li a {
-    color: white;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 40px;
-    padding-left: 32px;
-  }
-
-  .nav-links_mobile li a:hover {
-    color: #666;
-  }
-  .toggle_button {
-    display: block;
-  }
-  .nav-links {
+  .navbar {
     display: none;
+  }
+  .navbar_mobile_content {
+    display: block;
   }
 }

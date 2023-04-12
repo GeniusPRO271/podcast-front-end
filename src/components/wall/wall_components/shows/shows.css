@@ -1,5 +1,16 @@
 .shows_container {
   padding: 20px;
+
+
+}
+.shows_container_loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.fa-spinner{
+  color: #00d6f2;
 }
 .shows_title {
   font-family: 'Jockey One';
@@ -17,6 +28,12 @@
   box-shadow: 3px 3px 1px #00d6f2;
   border-radius: 15px;
   margin-top: 0px;
+}
+.show_container:hover{
+  box-shadow: 1px 1px 1px #00d6f2;
+  border: 2px solid #00d6f2;
+  transform: translateX(2px);
+  transform: translate(2px);
 }
 .show_container_image {
   padding: 2px;
@@ -53,7 +70,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 0px 12px 12px 0px;
   background-color: #00d6f2;
 }
 .show_moth {
@@ -64,7 +81,55 @@
   line-height: 42px;
   color: #ffffff;
 }
+
+@media only screen and (max-width: 1024px) {
+  .show_text {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .show_text_container {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .shows_container {
+    padding: 10px;
+  }
+  .shows_title {
+    font-size: 3'px;
+  }
+  .show_moth {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .moth_container {
+    padding-top: 20px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .show_text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .show_text_container {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .shows_container {
+    padding: 20px;
+  }
+  .shows_title {
+    font-size: 45px;
+  }
+  .show_moth {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .moth_container {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 425px) {
   .show_text {
     font-size: 12px;
     line-height: 20px;

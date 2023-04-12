@@ -1,0 +1,81 @@
+.contacto_container {
+  padding: 20px;
+}
+.contacto_title {
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  color: #ffffff;
+}
+.fa-envelope {
+  padding-right: 10px;
+  color: #00d6f2;
+}
+.contact_info_continer {
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.form_container {
+  padding-top: 20px;
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+}
+.form_container label {
+  color: white;
+  padding-left: 5px;
+}
+.form_container input {
+  height: 50px;
+  border-radius: 15px;
+  background: white;
+  border: 3px solid #fffdfd;
+  box-shadow: 3px 3px 1px #00d6f2;
+}
+.form_container input:hover {
+  background: white;
+  border: 3px solid #00d6f2;
+  box-shadow: 1px 1px 1px #00d6f2;
+  transform: translateX(2px);
+  transform: translate(2px);
+}
+.form_container textarea {
+  height: 50px;
+  border-radius: 15px;
+  background: white;
+  border: 3px solid #fffdfd;
+  box-shadow: 3px 3px 1px #00d6f2;
+}
+.form_container textarea:hover {
+  background: white;
+  border: 3px solid #00d6f2;
+  box-shadow: 1px 1px 1px #00d6f2;
+  transform: translateX(2px);
+  transform: translate(2px);
+}
+.form_container button {
+  background: #ff3b56;
+  border: 3px solid #fffdfd;
+  box-shadow: 3px 3px 1px #00d6f2;
+  background: #00d6f2;
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  width: 100px;
+  border-radius: 30px;
+  color: white;
+}
+.form_container button:hover {
+  color: #ff3b56;
+  background-color: white;
+  border: 3px solid #00d6f2;
+  box-shadow: 1px 1px 1px #00d6f2;
+  transform: translateX(3px);
+  transform: translate(3px);
+}

@@ -1,5 +1,20 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+header.scrolled {
+  background-color: #01051d;
+}
+
+main {
+  padding-top: 83px;
+}
 .border {
-  filter: drop-shadow(3px 3px 1px #00d6f2);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(sddefault.jpg);
   border: 3px solid #ffffff;
@@ -7,6 +22,11 @@
 }
 .container_main {
   margin: 20px 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .container_main {
+    margin: 20px 20px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container_main {

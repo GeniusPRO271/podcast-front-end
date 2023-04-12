@@ -6,10 +6,28 @@
   line-height: 56px;
   display: flex;
   align-items: center;
-
   color: #ff3b56;
-
   text-shadow: 2px 2px 1px rgba(0, 214, 242, 0.5);
+}
+.program_container:hover {
+  background: #fffdfd;
+  box-shadow: 3px 3px 1px#ff3b56;
+}
+.program_container:active {
+  transform: translateX(2px);
+  transform: translate(2px);
+  box-shadow: 1px 1px 1px #b62a3d;
+}
+.program_slider {
+  display: flex;
+  flex-direction: column;
+  max-height: 245px;
+  max-width: 800px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 .program_container {
   margin-bottom: 20px;
@@ -22,17 +40,18 @@
   margin-left: 10px;
   padding: 3px;
 }
+.program_container_if_not_first {
+  margin-left: 25px;
+}
 .program_title_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.program_container_if_not_first {
-  margin-left: 25px;
-}
 .image-cover {
   object-fit: fill;
   border-radius: 15px;
+  max-height: 200px;
 }
 .program_text_container {
   padding-left: 5px;
@@ -42,45 +61,36 @@
   font-family: 'Jockey One';
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 15px;
   align-items: center;
 
   color: rgba(0, 0, 0, 0.25);
 }
+
 .program_title {
   font-family: 'Jockey One';
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 11px;
   color: #000000;
 }
-.icon-box {
-  display: inline-block; /* to place boxes side-by-side */
-  background: #ff3b56;
-  border-radius: 8px;
-  height: 25px; /* adjust as needed */
-  width: 25px; /* adjust as needed */
-  filter: drop-shadow(1px 1px 1px #00d6f2);
-  margin-left: 12px;
-}
 
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white; /* adjust icon color as needed */
-  /* any other styling for the icons */
-}
 @media only screen and (max-width: 768px) {
+  .image-cover {
+    max-height: 140px;
+  }
+  .program_title {
+    display: none;
+  }
+  .program_description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 545px) {
+  .image-cover {
+    max-height: 90px;
+  }
   .program_title {
     display: none;
   }
@@ -99,6 +109,13 @@
   }
   .programas_container_text {
     font-size: 25px;
+
+    display: flex;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .programas_container_text {
+    font-size: 22px;
 
     display: flex;
   }

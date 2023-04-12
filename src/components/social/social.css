@@ -11,6 +11,9 @@
   width: 43px; /* adjust as needed */
   margin: 3px;
 }
+.social_icon-box:hover {
+  background: white;
+}
 
 .social_icon-container {
   display: flex;
@@ -27,7 +30,7 @@
   color: #ff3b56; /* adjust icon color as needed */
   /* any other styling for the icons */
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   .scoial_main_container {
     display: flex;
     justify-content: center;
@@ -39,5 +42,14 @@
     height: 35px; /* adjust as needed */
     width: 35px; /* adjust as needed */
     margin: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .scoial_main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-left: 0px;
   }
 }

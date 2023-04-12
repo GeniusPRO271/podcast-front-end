@@ -1,0 +1,24 @@
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.footer_text {
+  font-family: 'Jockey One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footer_text a {
+  color: #ff3b56;
+}
+.footer_text a:hover {
+  color: #00d6f2;
+}
+@media only screen and (max-width: 545px) {
+  .footer_text {
+    font-size: 15px;
+  }
+}

@@ -47,7 +47,11 @@ function Shows() {
   }, []);
 
   if (!shows) {
-    return <div>Loading...</div>;
+    return (
+      <div className="shows_container_loading">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+      </div>
+    );
   }
 
   const groupedShows = {};
@@ -65,29 +69,36 @@ function Shows() {
   const months = Object.values(groupedShows);
 
   return (
-    <div className="shows_container">
-      <div className="shows_title">SHOWS</div>
-      {months.map((month) => (
-        <div className="moth_container" key={month.monthName}>
-          <div className="show_moth">{month.monthName.toUpperCase()}</div>
-          {month.shows.map((show) => (
-            <div className="columns show_container is-mobile" key={show.id}>
-              <figure className=" column image show_container_image is-3">
-                <img src={show.image} className="show_image" />
-              </figure>
-              <div className="column show_text_container is-auto">
-                <p className="show_text">{show.title.toUpperCase()}</p>
-                {show.location} <br />
-                {formatDate(show.showDate).toUpperCase()}.
-              </div>
-              <div className="column show_button is-1">
-                <i class="fa-solid fa-angle-right show_icon fa-2x"></i>
-              </div>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="shows_container">
+        <div className="shows_title">SHOWS</div>
+        {months.map((month) => (
+          <div className="moth_container" key={month.monthName}>
+            <div className="show_moth">{month.monthName.toUpperCase()}</div>
+            {month.shows.map((show) => (
+              <a
+                href={show.buyticketlink}
+                target="_blank"
+                className="columns show_container is-mobile"
+                key={show.id}
+              >
+                <figure className=" column image show_container_image is-3">
+                  <img src={show.image} className="show_image" />
+                </figure>
+                <div className="column show_text_container is-auto">
+                  <p className="show_text">{show.title.toUpperCase()}</p>
+                  {show.location} <br />
+                  {formatDate(show.showDate).toUpperCase()}.
+                </div>
+                <div className="column show_button is-1">
+                  <i class="fa-solid fa-angle-right show_icon fa-2x"></i>
+                </div>
+              </a>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

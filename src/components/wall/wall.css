@@ -1,9 +1,23 @@
 .wall_main_container {
   margin: 0px 25px;
-  background: #ff3b56;
+  background: rgb(255, 59, 86);
   border: 3px solid #ffffff;
   box-shadow: 3px 3px 1px #00d6f2;
   border-radius: 35px;
+  max-height: 750px;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .wall_main_container {
+    margin: 0px 40px;
+    background: #ff3b56;
+    border: 3px solid #ffffff;
+    box-shadow: 3px 3px 1px #00d6f2;
+    border-radius: 35px;
+  }
 }
 @media only screen and (max-width: 768px) {
   .wall_main_container {
