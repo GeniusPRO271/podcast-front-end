@@ -1,15 +1,13 @@
 .shows_container {
   padding: 20px;
-
-
 }
-.shows_container_loading{
+.shows_container_loading {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-.fa-spinner{
+.fa-spinner {
   color: #00d6f2;
 }
 .shows_title {
@@ -24,17 +22,10 @@
 }
 .show_container {
   background: #ffffff;
-  border: 2px solid #ffffff;
-  box-shadow: 3px 3px 1px #00d6f2;
   border-radius: 15px;
   margin-top: 0px;
 }
-.show_container:hover{
-  box-shadow: 1px 1px 1px #00d6f2;
-  border: 2px solid #00d6f2;
-  transform: translateX(2px);
-  transform: translate(2px);
-}
+
 .show_container_image {
   padding: 2px;
 }
@@ -56,7 +47,7 @@
   font-family: 'Jockey One';
   font-style: normal;
   font-weight: 400;
-  font-size: 23px;
+  font-size: 21px;
   line-height: 32px;
   color: #000000;
 }
@@ -71,7 +62,6 @@
   align-items: center;
   display: flex;
   border-radius: 0px 12px 12px 0px;
-  background-color: #00d6f2;
 }
 .show_moth {
   font-family: 'Jockey One';
@@ -81,7 +71,75 @@
   line-height: 42px;
   color: #ffffff;
 }
-
+@media only screen and (max-width: 2800px) {
+  .show_text {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .show_text_container {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .shows_container {
+    padding: 32px;
+  }
+  .shows_title {
+    font-size: 60px;
+  }
+  .show_moth {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .moth_container {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 2300px) {
+  .show_text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .show_text_container {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .shows_container {
+    padding: 22px;
+  }
+  .shows_title {
+    font-size: 42px;
+  }
+  .show_moth {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .moth_container {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 1900px) {
+  .show_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .show_text_container {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .shows_container {
+    padding: 10px;
+  }
+  .shows_title {
+    font-size: 32px;
+  }
+  .show_moth {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .moth_container {
+    padding-top: 20px;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .show_text {
     font-size: 13px;
@@ -95,7 +153,7 @@
     padding: 10px;
   }
   .shows_title {
-    font-size: 3'px;
+    font-size: 32px;
   }
   .show_moth {
     font-size: 20px;
@@ -142,7 +200,7 @@
     padding: 10px;
   }
   .shows_title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .show_moth {
     font-size: 15px;

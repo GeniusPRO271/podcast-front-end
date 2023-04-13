@@ -1,18 +1,49 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './home.css';
 import Navbar from './components/navbar/navbar';
 import Programas from './components/programas/programas';
 import Social from './components/social/social';
 import Wall from './components/wall/wall';
 import Footer from './components/footer/footer';
-
+import YouTube from 'react-youtube';
 function Home() {
   const [vidBoxLink, setVidBoxLink] = useState(
-    'https://www.youtube.com/embed/Th_RkEsD0Zs'
+    'https://www.youtube.com/embed/videoseries?list=PLgSG7f4hM1f6trPdyPRQWjGUHXwax7JMR'
   );
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const onPlay = () => {
+    setIsPlaying(true);
+  };
+
+  const onPause = () => {
+    setIsPlaying(false);
+  };
+  function getYoutubeVideoId(url) {
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return match && match[2].length === 11 ? match[2] : null;
+  }
   const [activeWall, setActiveWall] = useState('show');
+  const opts = {
+    class: 'is-11',
+    height: '360',
+    width: '640',
+    playerVars: {
+      rel: 0, // remove related videos
+      showinfo: 0, // remove video title and uploader
+      modestbranding: 1, // remove YouTube logo
+      iv_load_policy: 3, // remove annotations
+      autoplay: 0,
+      listType: 'playlist',
+      list: vidBoxLink.split('list=')[1],
+    },
+  };
+
   useEffect(() => {
     const navbar = document.querySelector('header');
+
     const handleScroll = () => {
       if (window.pageYOffset > 45) {
         navbar.classList.add('scrolled');
@@ -20,7 +51,9 @@ function Home() {
         navbar.classList.remove('scrolled');
       }
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
@@ -32,13 +65,18 @@ function Home() {
         <div className="columns container_main">
           <div className="column is-7">
             <div className="vid-box columns">
-              <figure className="image is-16by9 is-11 column">
-                <iframe
-                  className="has-ratio border"
-                  width="720"
-                  src={vidBoxLink}
-                />
-              </figure>
+              {console.log(vidBoxLink)}
+              <YouTube
+                videoId={getYoutubeVideoId(vidBoxLink.split('list=')[1])}
+                iframeClassName={`has-ratio ${
+                  isPlaying ? 'border_playing' : 'border_pause'
+                }`}
+                className="image is-16by9 is-11 column"
+                opts={opts}
+                onPlay={onPlay}
+                onPause={onPause}
+              />
+
               <Social />
             </div>
             <Programas setVidBoxLink={setVidBoxLink} />

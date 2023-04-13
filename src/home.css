@@ -10,14 +10,22 @@ header {
 header.scrolled {
   background-color: #01051d;
 }
-
 main {
   padding-top: 83px;
+  scroll-behavior: smooth;
 }
-.border {
+.border_pause {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(sddefault.jpg);
   border: 3px solid #ffffff;
+  box-shadow: 3px 3px 1px #00d6f2;
+  border-radius: 20px;
+}
+.border_playing {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(sddefault.jpg);
+  border: 3px solid #ffffff;
+  box-shadow: 3px 3px 1px #ff3b56;
   border-radius: 20px;
 }
 .container_main {

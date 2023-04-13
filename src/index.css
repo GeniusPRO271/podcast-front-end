@@ -3,6 +3,7 @@
   src: url('../public/fonts/JockeyOne-Regular.ttf');
 }
 :root {
+  scroll-behavior: smooth;
   position: relative;
   background-image: url('../public/Back.jpg');
   background-size: cover;

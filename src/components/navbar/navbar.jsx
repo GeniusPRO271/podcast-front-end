@@ -77,7 +77,13 @@ const Navbar = ({ setActiveWall }) => {
               </a>
             </li>
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a
+                onClick={() => {
+                  setActiveWall('show');
+                }}
+                style={{ opacity: !toggle && 1 }}
+                href="#"
+              >
                 Próximos Shows
               </a>
             </li>
@@ -92,7 +98,13 @@ const Navbar = ({ setActiveWall }) => {
               </a>
             </li>
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a
+                onClick={() => {
+                  setActiveWall('contacto');
+                }}
+                style={{ opacity: !toggle && 1 }}
+                href="#"
+              >
                 Contacto
               </a>
             </li>

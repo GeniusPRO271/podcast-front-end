@@ -11,7 +11,7 @@ function Social() {
           class="social_icon-box"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-patreon social_icon fa-xl"></i>
+            <i class="fa-brands fa-patreon social_icon"></i>
           </div>
         </a>
         <a
@@ -20,7 +20,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-youtube social_icon fa-xl"></i>
+            <i class="fa-brands fa-youtube social_icon "></i>
           </div>
         </a>
         <a
@@ -29,7 +29,7 @@ function Social() {
           class="social_icon-box"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-twitter social_icon fa-xl"></i>
+            <i class="fa-brands fa-twitter social_icon "></i>
           </div>
         </a>
         <a
@@ -38,7 +38,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-facebook social_icon fa-xl"></i>
+            <i class="fa-brands fa-facebook social_icon "></i>
           </div>
         </a>
         <a
@@ -47,7 +47,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-tiktok social_icon fa-xl"></i>
+            <i class="fa-brands fa-tiktok social_icon "></i>
           </div>
         </a>
         <a
@@ -56,7 +56,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-spotify social_icon fa-xl"></i>
+            <i class="fa-brands fa-spotify social_icon "></i>
           </div>
         </a>
         <a
@@ -65,7 +65,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-instagram social_icon fa-xl"></i>
+            <i class="fa-brands fa-instagram social_icon"></i>
           </div>
         </a>
         <a
@@ -74,7 +74,7 @@ function Social() {
           target="_blank"
         >
           <div class="social_icon-container">
-            <i class="fa-brands fa-twitch social_icon fa-xl"></i>
+            <i class="fa-brands fa-twitch social_icon"></i>
           </div>
         </a>
       </div>

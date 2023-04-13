@@ -14,7 +14,6 @@ const Programas = ({ setVidBoxLink }) => {
       .get('http://localhost:3000/series')
       .then((response) => {
         const data = response.data;
-        console.log(data);
         setSeries(data);
       })
       .catch((error) => {
@@ -46,13 +45,12 @@ const Programas = ({ setVidBoxLink }) => {
                 className={`is-2 column program_container ${
                   index !== 0 ? 'program_container_if_not_first' : ''
                 } `}
-                id={d._id}
+                id={`slide-${index}`}
                 style={{
                   boxShadow: clicked == index && '1px 1px 1px#ff3b56',
                   transform: clicked == index && 'translate(2px)',
                 }}
               >
-                {console.log(index, clicked)}
                 <figure className="image">
                   <img src={d.imagesMain} className="image-cover" />
                 </figure>

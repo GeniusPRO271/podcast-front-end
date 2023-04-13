@@ -3,7 +3,8 @@ import './shows.css';
 
 function Shows() {
   const [shows, setShows] = useState(null);
-
+  const [isHover, setIsHover] = useState(false);
+  const [isHoverIndex, setIsHoverIndex] = useState(null);
   function formatDate(dateString) {
     const date = new Date(dateString);
     const days = [
@@ -75,26 +76,51 @@ function Shows() {
         {months.map((month) => (
           <div className="moth_container" key={month.monthName}>
             <div className="show_moth">{month.monthName.toUpperCase()}</div>
-            {month.shows.map((show) => (
-              <a
-                href={show.buyticketlink}
-                target="_blank"
-                className="columns show_container is-mobile"
-                key={show.id}
-              >
-                <figure className=" column image show_container_image is-3">
-                  <img src={show.image} className="show_image" />
-                </figure>
-                <div className="column show_text_container is-auto">
-                  <p className="show_text">{show.title.toUpperCase()}</p>
-                  {show.location} <br />
-                  {formatDate(show.showDate).toUpperCase()}.
-                </div>
-                <div className="column show_button is-1">
-                  <i class="fa-solid fa-angle-right show_icon fa-2x"></i>
-                </div>
-              </a>
-            ))}
+            {month.shows.map((show) => {
+              return (
+                <a
+                  href={show.buyticketlink}
+                  target="_blank"
+                  className="columns show_container is-mobile"
+                  id={show._id}
+                  style={{
+                    boxShadow:
+                      show._id == isHoverIndex && isHover
+                        ? `1px 1px 1px ${show.dominantColor}`
+                        : `3px 3px 1px ${show.dominantColor}`,
+                    border:
+                      show._id == isHoverIndex && isHover
+                        ? `2px solid ${show.dominantColor}`
+                        : '2px solid #ffffff',
+                    transform:
+                      show._id == isHoverIndex && isHover && 'translate(2px)',
+                  }}
+                  onMouseOver={() => {
+                    setIsHover(true);
+                    setIsHoverIndex(show._id);
+                  }}
+                  onMouseOut={() => {
+                    setIsHover(false);
+                    setIsHoverIndex(null);
+                  }}
+                >
+                  <figure className=" column image show_container_image is-3">
+                    <img src={show.image} className="show_image" />
+                  </figure>
+                  <div className="column show_text_container is-auto">
+                    <p className="show_text">{show.title.toUpperCase()}</p>
+                    {show.location} <br />
+                    {formatDate(show.showDate).toUpperCase()}.
+                  </div>
+                  <div
+                    style={{ backgroundColor: show.dominantColor }}
+                    className="column show_button is-1"
+                  >
+                    <i class="fa-solid fa-angle-right show_icon fa-2x"></i>
+                  </div>
+                </a>
+              );
+            })}
           </div>
         ))}
       </div>
