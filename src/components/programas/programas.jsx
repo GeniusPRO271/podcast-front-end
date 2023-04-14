@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './programas.css';
+
 const Programas = ({ setVidBoxLink }) => {
   const [series, setSeries] = useState(null);
 
@@ -10,8 +11,9 @@ const Programas = ({ setVidBoxLink }) => {
   }, []);
 
   function getProgramas() {
+    console.log('hello');
     axios
-      .get('http://localhost:3000/series')
+      .get('https://podcast-api-production.up.railway.app/series')
       .then((response) => {
         const data = response.data;
         setSeries(data);

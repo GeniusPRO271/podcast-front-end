@@ -39,7 +39,9 @@ function Shows() {
 
   useEffect(() => {
     async function getShows() {
-      const response = await fetch('http://localhost:3000/shows');
+      const response = await fetch(
+        'https://podcast-api-production.up.railway.app/shows'
+      );
       const data = await response.json();
       console.log(data);
       setShows(data);
