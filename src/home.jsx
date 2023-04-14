@@ -69,7 +69,7 @@ function Home() {
               <YouTube
                 videoId={getYoutubeVideoId(vidBoxLink.split('list=')[1])}
                 iframeClassName={`has-ratio ${
-                  isPlaying ? 'border_playing' : 'border_pause'
+                  isPlaying ? 'animation_border' : 'border'
                 }`}
                 className="image is-16by9 is-11 column"
                 opts={opts}

@@ -26,9 +26,6 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="#">Últimos Videos</a>
-          </li>
-          <li>
             <a href="#">Patreon y Tienda</a>
           </li>
           <li>
@@ -65,7 +62,7 @@ const Navbar = ({ setActiveWall }) => {
         <div
           className="toggle_content"
           style={{
-            height: !toggle && '260px',
+            height: !toggle ? '220px' : '0px',
             background: !toggle && '#01051D',
             borderRadius: 30,
           }}
@@ -89,11 +86,6 @@ const Navbar = ({ setActiveWall }) => {
             </li>
             <li>
               <a style={{ opacity: !toggle && 1 }} href="#">
-                Últimos Videos
-              </a>
-            </li>
-            <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
                 Patreon y Tienda
               </a>
             </li>
@@ -103,7 +95,6 @@ const Navbar = ({ setActiveWall }) => {
                   setActiveWall('contacto');
                 }}
                 style={{ opacity: !toggle && 1 }}
-                href="#"
               >
                 Contacto
               </a>

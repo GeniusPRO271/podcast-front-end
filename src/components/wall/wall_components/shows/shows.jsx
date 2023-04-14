@@ -72,7 +72,7 @@ function Shows() {
   return (
     <>
       <div className="shows_container">
-        <div className="shows_title">SHOWS</div>
+        <div className="shows_title">PROXIMOS SHOWS</div>
         {months.map((month) => (
           <div className="moth_container" key={month.monthName}>
             <div className="show_moth">{month.monthName.toUpperCase()}</div>

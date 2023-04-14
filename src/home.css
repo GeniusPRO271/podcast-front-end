@@ -14,19 +14,25 @@ main {
   padding-top: 83px;
   scroll-behavior: smooth;
 }
-.border_pause {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(sddefault.jpg);
+.border {
   border: 3px solid #ffffff;
+  border-radius: 20px;
   box-shadow: 3px 3px 1px #00d6f2;
+}
+.animation_border {
+  animation-name: shadow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  border: 3px solid #ffffff;
   border-radius: 20px;
 }
-.border_playing {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(sddefault.jpg);
-  border: 3px solid #ffffff;
-  box-shadow: 3px 3px 1px #ff3b56;
-  border-radius: 20px;
+@keyframes shadow {
+  from {
+    box-shadow: 3px 3px 1px #00d6f2;
+  }
+  to {
+    box-shadow: 3px 3px 10px #ff3b56;
+  }
 }
 .container_main {
   margin: 20px 32px;
