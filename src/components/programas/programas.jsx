@@ -66,6 +66,7 @@ const Programas = ({ setVidBoxLink }) => {
                     {d.serieDays.map((d) => {
                       return ` ${d.toUpperCase()} `;
                     })}
+                    <br></br>
                     {d.serieStart} - {d.serieEnd}
                   </p>
                 </div>
