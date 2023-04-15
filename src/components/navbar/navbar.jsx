@@ -14,7 +14,10 @@ const Navbar = ({ setActiveWall }) => {
         </div>
         <ul className="nav-links">
           <li>
-            <a href="https://www.youtube.com/@elsentidodelhumorproducciones">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@elsentidodelhumorproducciones"
+            >
               Programas
             </a>
           </li>
@@ -28,7 +31,7 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="https://www.patreon.com/elsentidodelhumor">
+            <a href="https://www.patreon.com/elsentidodelhumor" target="_blank">
               Patreon y Tienda
             </a>
           </li>
@@ -73,7 +76,11 @@ const Navbar = ({ setActiveWall }) => {
         >
           <ul className="nav-links_mobile">
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a
+                style={{ opacity: !toggle && 1 }}
+                target="_blank"
+                href="https://www.youtube.com/@elsentidodelhumorproducciones"
+              >
                 Programas
               </a>
             </li>
@@ -89,7 +96,11 @@ const Navbar = ({ setActiveWall }) => {
               </a>
             </li>
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a
+                style={{ opacity: !toggle && 1 }}
+                target="_blank"
+                href="https://www.patreon.com/elsentidodelhumor"
+              >
                 Patreon y Tienda
               </a>
             </li>
