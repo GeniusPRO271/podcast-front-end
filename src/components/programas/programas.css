@@ -194,6 +194,9 @@
   .image-cover {
     max-height: 140px;
   }
+  .program_container {
+    max-width: 150px;
+  }
   .program_title {
     display: none;
   }
