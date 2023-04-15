@@ -166,21 +166,21 @@
 
 @media only screen and (max-width: 768px) {
   .show_text {
-    font-size: 19px;
+    font-size: 15px;
     line-height: 25px;
   }
   .show_text_container {
     font-size: 12px;
-    line-height: 25px;
+    line-height: 15px;
   }
   .shows_container {
     padding: 20px;
   }
   .shows_title {
-    font-size: 45spx;
+    font-size: 40px;
   }
   .show_moth {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 60px;
   }
   .moth_container {
