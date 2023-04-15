@@ -14,7 +14,9 @@ const Navbar = ({ setActiveWall }) => {
         </div>
         <ul className="nav-links">
           <li>
-            <a href="#">Programas</a>
+            <a href="https://www.youtube.com/@elsentidodelhumorproducciones">
+              Programas
+            </a>
           </li>
           <li>
             <a
@@ -26,7 +28,9 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="#">Patreon y Tienda</a>
+            <a href="https://www.patreon.com/elsentidodelhumor">
+              Patreon y Tienda
+            </a>
           </li>
           <li>
             <a
