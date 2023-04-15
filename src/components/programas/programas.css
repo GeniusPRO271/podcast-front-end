@@ -82,7 +82,7 @@
   line-height: 15px;
   color: #000000;
 }
-@media only screen and (max-width: 2300px) {
+@media only screen and (max-width: 2560px) {
   .program_slider {
     max-height: 540px;
     max-width: 1300px;
@@ -104,7 +104,7 @@
     box-shadow: 1px 1px 1px #b62a3d;
   }
   .program_title {
-    font-size: 15px;
+    font-size: 17px;
   }
   .program_description {
     font-size: 12px;
@@ -134,10 +134,10 @@
     box-shadow: 1px 1px 1px #b62a3d;
   }
   .program_title {
-    font-size: 12px;
+    font-size: 11px;
   }
   .program_description {
-    font-size: 10px;
+    font-size: 9px;
     padding-top: 3px;
     padding-bottom: 10px;
   }

@@ -37,7 +37,31 @@ main {
 .container_main {
   margin: 20px 32px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 2560px) {
+  .border {
+    box-shadow: 5px 5px 1px #00d6f2;
+  }
+  @keyframes shadow {
+    from {
+      box-shadow: 5px 5px 1px #00d6f2;
+    }
+    to {
+      box-shadow: 5px 5px 10px #ff3b56;
+    }
+  }
+}
+@media only screen and (max-width: 1900px) {
+  .border {
+    box-shadow: 3px 3px 1px #00d6f2;
+  }
+  @keyframes shadow {
+    from {
+      box-shadow: 3px 3px 1px #00d6f2;
+    }
+    to {
+      box-shadow: 3px 3px 10px #ff3b56;
+    }
+  }
   .container_main {
     margin: 20px 20px;
   }

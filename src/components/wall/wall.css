@@ -15,18 +15,18 @@
     margin: 0px 40px;
     background: #ff3b56;
     border: 3px solid #ffffff;
-    box-shadow: 3px 3px 1px #00d6f2;
-    max-height: 1200px;
+    box-shadow: 5px 5px 1px #00d6f2;
+    max-height: 990px;
     border-radius: 35px;
   }
 }
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1900px) {
   .wall_main_container {
     margin: 0px 40px;
     background: #ff3b56;
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
-    max-height: 900px;
+    max-height: 920px;
     border-radius: 35px;
   }
 }
@@ -36,7 +36,7 @@
     background: #ff3b56;
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
-    max-height: 750px;
+    max-height: 780px;
     border-radius: 35px;
   }
 }
