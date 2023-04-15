@@ -16,7 +16,7 @@ const Navbar = ({ setActiveWall }) => {
           <li>
             <a
               target="_blank"
-              href="https://www.youtube.com/@elsentidodelhumorproducciones"
+              href="https://www.youtube.com/@elsentidodelhumorproducciones/podcasts"
             >
               Programas
             </a>
