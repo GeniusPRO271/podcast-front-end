@@ -226,12 +226,13 @@
   .program_container {
     margin-bottom: 20px;
     border-radius: 20px;
+    max-width: 100px;
     margin-top: 10px;
     margin-left: 10px;
     padding: 3px;
   }
   .programas_container_text {
-    font-size: 25px;
+    font-size: 30px;
 
     display: flex;
   }
