@@ -52,7 +52,11 @@ const Shows = ({ activeWall }) => {
 
   if (!shows) {
     return (
-      <div className={`${activeWall == 'show' ? 'show' : 'hidden'}`}>
+      <div
+        className={`shows_container_loading ${
+          activeWall == 'show' ? 'show' : 'hidden'
+        }`}
+      >
         <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
       </div>
     );
