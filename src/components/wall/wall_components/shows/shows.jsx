@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './shows.css';
-
-function Shows() {
+import '../../wall.css';
+const Shows = ({ activeWall }) => {
   const [shows, setShows] = useState(null);
   const [isHover, setIsHover] = useState(false);
   const [isHoverIndex, setIsHoverIndex] = useState(null);
+  const groupedShows = {};
   function formatDate(dateString) {
     const date = new Date(dateString);
     const days = [
@@ -51,13 +52,12 @@ function Shows() {
 
   if (!shows) {
     return (
-      <div className="shows_container_loading">
+      <div className={`${activeWall == 'show' ? 'show' : 'hidden'}`}>
         <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
       </div>
     );
   }
 
-  const groupedShows = {};
   shows.forEach((show) => {
     const month = new Date(show.showDate).getMonth();
     if (!groupedShows[month]) {
@@ -70,9 +70,9 @@ function Shows() {
     }
   });
   const months = Object.values(groupedShows);
-
+  console.log(activeWall);
   return (
-    <>
+    <div className={`${activeWall == 'show' ? 'show' : 'hidden'}`}>
       <div className="shows_container">
         <div className="shows_title">PROXIMOS SHOWS</div>
         {months.map((month) => (
@@ -126,8 +126,8 @@ function Shows() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Shows;

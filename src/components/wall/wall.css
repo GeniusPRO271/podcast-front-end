@@ -5,10 +5,38 @@
   box-shadow: 3px 3px 1px #00d6f2;
   border-radius: 35px;
   max-height: 750px;
-  overflow: scroll;
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+@keyframes move-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes move-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.hidden {
+  height: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+.show {
+  height: auto;
+  padding: 10px;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 0.2s ease;
 }
 @media only screen and (max-width: 2560px) {
   .wall_main_container {

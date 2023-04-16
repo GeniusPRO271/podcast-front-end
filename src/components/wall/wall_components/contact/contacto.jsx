@@ -1,8 +1,14 @@
 import React from 'react';
 import './contacto.css';
-function Contacto() {
+import '../../wall.css';
+const Contacto = ({ activeWall }) => {
   return (
-    <div className="contacto_container">
+    <div
+      className={`contacto_container  ${
+        activeWall == 'contacto' ? 'show' : 'hidden'
+      }`}
+      style={{ padding: activeWall == 'contacto' ? 20 : 0 }}
+    >
       <div className="contacto_title">CONTACTANOS</div>
       <div className="contact_info_continer">
         <i class="fa-solid fa-envelope fa-xl"></i> contacto@esdh.cl
@@ -50,6 +56,6 @@ function Contacto() {
       </form>
     </div>
   );
-}
+};
 
 export default Contacto;
