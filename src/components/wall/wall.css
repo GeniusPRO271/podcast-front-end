@@ -3,7 +3,7 @@
   background: rgb(255, 59, 86);
   border: 3px solid #ffffff;
   box-shadow: 3px 3px 1px #00d6f2;
-  border-radius: 35px;
+  border-radius: 20px;
   max-height: 750px;
 }
 ::-webkit-scrollbar {
@@ -45,7 +45,7 @@
     border: 3px solid #ffffff;
     box-shadow: 5px 5px 1px #00d6f2;
     max-height: 990px;
-    border-radius: 35px;
+    border-radius: 20px;
   }
 }
 @media only screen and (max-width: 1900px) {
@@ -55,7 +55,7 @@
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
     max-height: 920px;
-    border-radius: 35px;
+    border-radius: 20px;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -65,7 +65,7 @@
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
     max-height: 780px;
-    border-radius: 35px;
+    border-radius: 20px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -75,7 +75,7 @@
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
     max-height: 700px;
-    border-radius: 35px;
+    border-radius: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -84,6 +84,6 @@
     background: #ff3b56;
     border: 3px solid #ffffff;
     box-shadow: 3px 3px 1px #00d6f2;
-    border-radius: 35px;
+    border-radius: 20px;
   }
 }

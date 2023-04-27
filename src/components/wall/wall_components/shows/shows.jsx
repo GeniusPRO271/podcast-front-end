@@ -5,6 +5,7 @@ const Shows = ({ activeWall }) => {
   const [shows, setShows] = useState(null);
   const [isHover, setIsHover] = useState(false);
   const [isHoverIndex, setIsHoverIndex] = useState(null);
+  const [selectedMonth, setSelectedMonth] = useState('');
   let transDelay = 0;
   const groupedShows = {};
   function formatDate(dateString) {
@@ -35,10 +36,8 @@ const Shows = ({ activeWall }) => {
     const dayName = days[date.getDay()];
     const day = date.getDate();
     const monthName = months[date.getMonth()];
-    const year = date.getFullYear();
     return `${dayName} ${day} ${monthName}`;
   }
-
   useEffect(() => {
     async function getShows() {
       const response = await fetch('http://localhost:3000/shows');
@@ -72,65 +71,92 @@ const Shows = ({ activeWall }) => {
     }
   });
   const months = Object.values(groupedShows);
+  console.log(months);
   return (
     <div className={`${activeWall == 'show' ? 'show' : 'hidden'}`}>
       <div className="shows_container">
         <div className="shows_title">PROXIMOS SHOWS</div>
-        {months.map((month) => (
-          <div className="moth_container" key={month.monthName}>
-            <div className="show_moth">{month.monthName.toUpperCase()}</div>
-            {month.shows.map((show) => {
-              transDelay += 100;
-              return (
-                <a
-                  key={show._id}
-                  target="_blank"
-                  href={show.buyticketlink}
-                  className={`columns ${
-                    activeWall == 'show'
-                      ? 'show_container'
-                      : 'show_container_hidden'
-                  } is-mobile`}
-                  id={show._id}
-                  style={{
-                    transitionDelay: `${transDelay}ms`,
-                    boxShadow:
-                      show._id == isHoverIndex &&
-                      isHover &&
-                      `3px 3px 1px ${show.dominantColor}`,
-                    border: `2px solid ${show.dominantColor}`,
-                    transform:
-                      show._id == isHoverIndex && isHover && 'translate(-3px)',
-                    transition: 'all 0.3s ease',
-                  }}
-                  onMouseOver={() => {
-                    setIsHover(true);
-                    setIsHoverIndex(show._id);
-                  }}
-                  onMouseOut={() => {
-                    setIsHover(false);
-                    setIsHoverIndex(null);
-                  }}
-                >
-                  <figure className=" column image show_container_image is-3">
-                    <img src={show.image} className="show_image" />
-                  </figure>
-                  <div className="column show_text_container is-auto">
-                    <p className="show_text">{show.title.toUpperCase()}</p>
-                    {show.location} <br />
-                    {formatDate(show.showDate).toUpperCase()}.
-                  </div>
-                  <div
-                    style={{ backgroundColor: show.dominantColor }}
-                    className="column show_button is-1"
-                  >
-                    <i className="fa-solid fa-angle-right show_icon fa-2x"></i>
-                  </div>
-                </a>
-              );
-            })}
+        <div className="filters_container">
+          <div className="month_filter">
+            <select
+              className="month_filter_style"
+              value={selectedMonth}
+              onChange={(e) => setSelectedMonth(e.target.value)}
+            >
+              <option value="">Select a month</option>
+              {months.map((month, index) => (
+                <option key={index} value={month.monthName}>
+                  {month.monthName}
+                </option>
+              ))}
+            </select>
           </div>
-        ))}
+        </div>
+        {months.map((month) => {
+          console.log(selectedMonth);
+          // If no month is selected or the selected month matches the current month
+          if (!selectedMonth || selectedMonth === month.monthName) {
+            return (
+              <div className="moth_container" key={month.monthName}>
+                <div className="show_moth">{month.monthName.toUpperCase()}</div>
+                {month.shows.map((show) => {
+                  transDelay += 100;
+                  return (
+                    <a
+                      key={show._id}
+                      target="_blank"
+                      href={show.buyticketlink}
+                      className={`columns ${
+                        activeWall == 'show'
+                          ? 'show_container'
+                          : 'show_container_hidden'
+                      } is-mobile`}
+                      id={show._id}
+                      style={{
+                        transitionDelay: `${transDelay}ms`,
+                        boxShadow:
+                          show._id == isHoverIndex &&
+                          isHover &&
+                          `3px 3px 1px ${show.dominantColor}`,
+                        border: `2px solid ${show.dominantColor}`,
+                        transform:
+                          show._id == isHoverIndex &&
+                          isHover &&
+                          'translate(-3px)',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseOver={() => {
+                        setIsHover(true);
+                        setIsHoverIndex(show._id);
+                      }}
+                      onMouseOut={() => {
+                        setIsHover(false);
+                        setIsHoverIndex(null);
+                      }}
+                    >
+                      <figure className=" column image show_container_image is-3">
+                        <img src={show.image} className="show_image" />
+                      </figure>
+                      <div className="column show_text_container is-auto">
+                        <p className="show_text">{show.title.toUpperCase()}</p>
+                        {show.location} <br />
+                        {formatDate(show.showDate).toUpperCase()}.
+                      </div>
+                      <div
+                        style={{ backgroundColor: show.dominantColor }}
+                        className="column show_button is-1"
+                      >
+                        <i className="fa-solid fa-angle-right show_icon fa-2x"></i>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            );
+          } else {
+            return null; // don't render anything for months that don't match the selected month
+          }
+        })}
       </div>
     </div>
   );
