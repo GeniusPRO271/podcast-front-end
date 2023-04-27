@@ -53,8 +53,8 @@ const Navbar = ({ setActiveWall }) => {
             href="https://www.patreon.com/elsentidodelhumor"
             className="patreon_button"
           >
-            <span class="button_text">CONTENIDO EXCLUSIVO</span>
-            <i class="fa-brands fa-patreon"></i>
+            <span className="button_text">CONTENIDO EXCLUSIVO</span>
+            <i className="fa-brands fa-patreon"></i>
           </a>
         </div>
       </nav>

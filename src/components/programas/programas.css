@@ -17,19 +17,17 @@
   transition: all 0.3s ease;
   border-radius: 20px;
   max-width: 200px;
-  margin-top: 10px;
-  margin: 10px 20px;
-  padding: 3px;
-}
-.program_container_if_not_first {
+  margin: 20px 20px;
   margin-left: 0px;
+  padding: 3px;
+  transition: all 0.1s ease-in-out;
 }
+
 .program_container:hover {
   background: #fffdfd;
   box-shadow: 3px 3px 1px #00d6f2;
   transform: translateX(-4px);
   transform: translateY(-4px);
-  transition: all 0.3s ease;
 }
 .program_selected {
   border: 3px solid #ff3b56;
@@ -39,12 +37,12 @@
   transition: all 0.3s ease;
   border-radius: 20px;
   max-width: 200px;
-  margin-top: 10px;
-  margin: 10px 20px;
+  margin: 20px 20px;
+  margin-left: 0px;
   padding: 3px;
   transform: translateX(-4px);
   transform: translateY(-4px);
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 .program_container:active {
   transform: translateX(3px);

@@ -43,7 +43,6 @@ const Shows = ({ activeWall }) => {
     async function getShows() {
       const response = await fetch('http://localhost:3000/shows');
       const data = await response.json();
-      console.log(data);
       setShows(data);
     }
     getShows();
@@ -56,7 +55,7 @@ const Shows = ({ activeWall }) => {
           activeWall == 'show' ? 'show' : 'hidden'
         }`}
       >
-        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <i className="fa-solid fa-spinner fa-spin fa-2x"></i>
       </div>
     );
   }
@@ -73,7 +72,6 @@ const Shows = ({ activeWall }) => {
     }
   });
   const months = Object.values(groupedShows);
-  console.log(activeWall);
   return (
     <div className={`${activeWall == 'show' ? 'show' : 'hidden'}`}>
       <div className="shows_container">
@@ -85,6 +83,7 @@ const Shows = ({ activeWall }) => {
               transDelay += 100;
               return (
                 <a
+                  key={show._id}
                   target="_blank"
                   href={show.buyticketlink}
                   className={`columns ${
@@ -125,7 +124,7 @@ const Shows = ({ activeWall }) => {
                     style={{ backgroundColor: show.dominantColor }}
                     className="column show_button is-1"
                   >
-                    <i class="fa-solid fa-angle-right show_icon fa-2x"></i>
+                    <i className="fa-solid fa-angle-right show_icon fa-2x"></i>
                   </div>
                 </a>
               );

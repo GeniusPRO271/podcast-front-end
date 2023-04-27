@@ -2,16 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './auspicios.css';
 import Sponsosrs from '../../components/sponsors/sponsors';
 import Footer from '../../components/footer/footer';
-function Auspicios() {
-  const [programas, setProgramas] = useState();
-  useEffect(() => {
-    async function getSeries() {
-      const response = await fetch('http://localhost:3000/series');
-      const data = await response.json();
-      setProgramas(data);
-    }
-    getSeries();
-  }, []);
+function Auspicios({ programas }) {
   return (
     <div>
       <header>

@@ -6,13 +6,11 @@ import Social from '../../components/social/social';
 import Wall from '../../components/wall/wall';
 import Footer from '../../components/footer/footer';
 import YouTube from 'react-youtube';
-import Sponsosrs from '../../components/sponsors/sponsors';
 function Home() {
   const [vidBoxLink, setVidBoxLink] = useState(
     'https://www.youtube.com/playlist?list=PLgSG7f4hM1f574dIihVMQBwiy8tlQv_hk'
   );
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
 
   const onPlay = () => {
     setIsPlaying(true);
@@ -45,13 +43,6 @@ function Home() {
 
   useEffect(() => {
     const navbar = document.querySelector('header');
-    async function getSeries() {
-      const response = await fetch('http://localhost:3000/series');
-      const data = await response.json();
-      console.log(data);
-      setProgramas(data);
-    }
-    getSeries();
     const handleScroll = () => {
       if (window.pageYOffset > 45) {
         navbar.classList.add('scrolled');

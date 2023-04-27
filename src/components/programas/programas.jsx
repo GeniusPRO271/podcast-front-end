@@ -40,6 +40,7 @@ const Programas = ({ setVidBoxLink }) => {
           {series.map((d, index) => {
             return (
               <a
+                key={index}
                 onClick={() => {
                   programClick(d, index);
                 }}
