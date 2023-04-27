@@ -10,19 +10,21 @@ function Sponsosrs({ programas }) {
   let ecdlp;
   let esdh;
   let ebyb;
-  console.log(programas);
+  let ñoño;
+
   programas.map((d) => {
     d.title == 'Que Entren Todxs' && (qet = d),
       d.title == 'El Club de los Precisos' && (ecdlp = d),
       d.title == 'El sentido del humor' && (esdh = d),
-      d.title == 'Entre Broma y Broma' && (ebyb = d);
+      d.title == 'Entre Broma y Broma' && (ebyb = d),
+      d.title == 'Ñoñoinos' && (ñoño = d);
   });
   return (
     <div className="sponsors_container">
       <Qet programa={qet} />
       <div className="sponsors_container_2">
         <div className="  left_column">
-          <Ñoñoinos />
+          <Ñoñoinos programa={ñoño} />
           <Ecldp programa={ecdlp} />
         </div>
         <div className=" right_column">

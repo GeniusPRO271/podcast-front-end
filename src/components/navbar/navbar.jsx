@@ -48,6 +48,15 @@ const Navbar = ({ setActiveWall }) => {
             <a href="/auspiciar">Auspicios</a>
           </li>
         </ul>
+        <div className="patreon_button_container">
+          <a
+            href="https://www.patreon.com/elsentidodelhumor"
+            className="patreon_button"
+          >
+            <span class="button_text">CONTENIDO EXCLUSIVO</span>
+            <i class="fa-brands fa-patreon"></i>
+          </a>
+        </div>
       </nav>
       <nav className="navbar_mobile_content">
         <div className="navbar_mobile">

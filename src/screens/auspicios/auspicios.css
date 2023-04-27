@@ -1,0 +1,38 @@
+main {
+  margin-top: 20px;
+}
+.aus_ack_arrow {
+  position: absolute;
+  padding: 20px;
+}
+.aus_icon_container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #ff3b56;
+
+  transition: all 0.1s ease-in-out;
+}
+.aus_icon_container {
+  color: white;
+}
+.aus_icon_container:hover {
+  box-shadow: 2px 3px 1px #00d6f2;
+  border: 2px solid #00d6f2;
+  background-color: #ff3b56;
+  transform: translateX(-2px);
+  transform: translateY(-3px);
+}
+.aus_icon_container:hover i {
+  color: white;
+}
+.aus_icon_container:active {
+  box-shadow: 1px 1px 1px #00d6f2;
+  border: 2px solid #00d6f2;
+  background-color: #ff3b56;
+  transform: translateX(0px);
+  transform: translateY(0px);
+}

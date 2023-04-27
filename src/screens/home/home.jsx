@@ -6,6 +6,7 @@ import Social from '../../components/social/social';
 import Wall from '../../components/wall/wall';
 import Footer from '../../components/footer/footer';
 import YouTube from 'react-youtube';
+import Sponsosrs from '../../components/sponsors/sponsors';
 function Home() {
   const [vidBoxLink, setVidBoxLink] = useState(
     'https://www.youtube.com/playlist?list=PLgSG7f4hM1f574dIihVMQBwiy8tlQv_hk'
@@ -85,6 +86,7 @@ function Home() {
             </div>
             <Programas setVidBoxLink={setVidBoxLink} />
           </div>
+
           <Wall activeWall={activeWall} />
         </div>
       </main>

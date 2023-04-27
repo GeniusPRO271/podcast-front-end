@@ -4,7 +4,6 @@ import './Ecldp.css';
 function Ecldp({ programa }) {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      console.log('works');
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('ecldp_show');
