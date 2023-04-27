@@ -1,0 +1,15 @@
+.ñoñoinos_container {
+  width: 950;
+  height: 400px;
+  padding: 0px 20px;
+  padding-top: 50px;
+}
+.ñoñoinos_layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #0480bd;
+}

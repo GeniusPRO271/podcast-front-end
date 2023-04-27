@@ -45,7 +45,7 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="#">Auspicios</a>
+            <a href="/auspiciar">Auspicios</a>
           </li>
         </ul>
       </nav>
@@ -115,7 +115,7 @@ const Navbar = ({ setActiveWall }) => {
               </a>
             </li>
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a style={{ opacity: !toggle && 1 }} href="/auspiciar">
                 Auspicios
               </a>
             </li>
@@ -127,25 +127,3 @@ const Navbar = ({ setActiveWall }) => {
 };
 
 export default Navbar;
-{
-  /* <ul className="nav-links">
-        <li>
-          <a href="#">Programas</a>
-        </li>
-        <li>
-          <a href="#">Próximos Shows</a>
-        </li>
-        <li>
-          <a href="#">Últimos Videos</a>
-        </li>
-        <li>
-          <a href="#">Patreon y Tienda</a>
-        </li>
-        <li>
-          <a href="#">Contacto</a>
-        </li>
-        <li>
-          <a href="#">Auspicios</a>
-        </li>
-      </ul> */
-}

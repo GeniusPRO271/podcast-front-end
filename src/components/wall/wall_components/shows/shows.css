@@ -20,10 +20,23 @@
 .moth_container {
   padding-top: 10px;
 }
+.show_container:active {
+  transition: transform 0.3s ease;
+}
 .show_container {
   background: #ffffff;
   border-radius: 15px;
   margin-top: 0px;
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
+}
+.show_container_hidden {
+  background: #ffffff;
+  border-radius: 15px;
+  margin-top: 0px;
+  opacity: 0.5;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
 .show_container_image {

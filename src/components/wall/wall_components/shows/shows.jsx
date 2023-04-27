@@ -5,6 +5,7 @@ const Shows = ({ activeWall }) => {
   const [shows, setShows] = useState(null);
   const [isHover, setIsHover] = useState(false);
   const [isHoverIndex, setIsHoverIndex] = useState(null);
+  let transDelay = 0;
   const groupedShows = {};
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -40,9 +41,7 @@ const Shows = ({ activeWall }) => {
 
   useEffect(() => {
     async function getShows() {
-      const response = await fetch(
-        'https://podcast-api-production.up.railway.app/shows'
-      );
+      const response = await fetch('http://localhost:3000/shows');
       const data = await response.json();
       console.log(data);
       setShows(data);
@@ -83,23 +82,27 @@ const Shows = ({ activeWall }) => {
           <div className="moth_container" key={month.monthName}>
             <div className="show_moth">{month.monthName.toUpperCase()}</div>
             {month.shows.map((show) => {
+              transDelay += 100;
               return (
                 <a
-                  href={show.buyticketlink}
                   target="_blank"
-                  className="columns show_container is-mobile"
+                  href={show.buyticketlink}
+                  className={`columns ${
+                    activeWall == 'show'
+                      ? 'show_container'
+                      : 'show_container_hidden'
+                  } is-mobile`}
                   id={show._id}
                   style={{
+                    transitionDelay: `${transDelay}ms`,
                     boxShadow:
-                      show._id == isHoverIndex && isHover
-                        ? `1px 1px 1px ${show.dominantColor}`
-                        : `3px 3px 1px ${show.dominantColor}`,
-                    border:
-                      show._id == isHoverIndex && isHover
-                        ? `2px solid ${show.dominantColor}`
-                        : '2px solid #ffffff',
+                      show._id == isHoverIndex &&
+                      isHover &&
+                      `3px 3px 1px ${show.dominantColor}`,
+                    border: `2px solid ${show.dominantColor}`,
                     transform:
-                      show._id == isHoverIndex && isHover && 'translate(2px)',
+                      show._id == isHoverIndex && isHover && 'translate(-3px)',
+                    transition: 'all 0.3s ease',
                   }}
                   onMouseOver={() => {
                     setIsHover(true);

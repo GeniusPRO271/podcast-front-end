@@ -1,0 +1,20 @@
+.sponsors_container {
+  width: 100%;
+}
+.sponsors_container_2 {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+}
+.left_column {
+  display: flex;
+  flex-grow: 1;
+  width: 50%;
+  flex-direction: column;
+}
+.right_column {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  flex-grow: 1;
+}

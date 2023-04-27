@@ -2,18 +2,6 @@
   font-family: 'Jockey One';
   src: url('../public/fonts/JockeyOne-Regular.ttf');
 }
-.leaves-animation {
-  position: relative;
-  animation: move-and-fade 0.5s forwards;
-}
-@keyframes move-and-fade {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 .navbar {
   font-family: 'Jockey One', sans-serif;
   display: flex;
