@@ -1,38 +1,62 @@
-main {
-  margin-top: 20px;
+@font-face {
+  font-family: 'Jockey One';
+  src: url('../public/fonts/JockeyOne-Regular.ttf');
 }
-.aus_ack_arrow {
-  position: absolute;
-  padding: 20px;
-}
-.aus_icon_container {
-  width: 60px;
-  height: 60px;
+.images_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  background-color: #ff3b56;
+  flex-wrap: wrap;
+  padding: 100px;
+}
 
-  transition: all 0.1s ease-in-out;
+.sponsor-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 20px;
 }
-.aus_icon_container {
+
+.spon_img_style {
+  width: 200px;
+  height: 200px;
+
+  object-fit: fill;
+}
+.spon_text {
+  font-family: 'Jockey One';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.spon_title {
   color: white;
+  font-size: 50px;
 }
-.aus_icon_container:hover {
-  box-shadow: 2px 3px 1px #00d6f2;
-  border: 2px solid #00d6f2;
-  background-color: #ff3b56;
-  transform: translateX(-2px);
-  transform: translateY(-3px);
+.spon_description {
+  font-size: 25px;
+  color: gray;
 }
-.aus_icon_container:hover i {
-  color: white;
+
+@media screen and (max-width: 767px) {
+  .sponsor-logo-container {
+    width: 50%;
+  }
+  .spon_img_style {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
 }
-.aus_icon_container:active {
-  box-shadow: 1px 1px 1px #00d6f2;
-  border: 2px solid #00d6f2;
-  background-color: #ff3b56;
-  transform: translateX(0px);
-  transform: translateY(0px);
+@media screen and (max-width: 550px) {
+  .sponsor-logo-container {
+    width: 100%;
+  }
+  .spon_img_style {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
 }

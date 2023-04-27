@@ -27,7 +27,9 @@ function Ebyb({ programa }) {
             <p className="ebyb_description">{programa.description}</p>
           </div>
           <div className="ebyb_button_continer">
-            <a className="ebyb_button">AUSPICIAR</a>
+            <a href={programa.youtubeLink} className="ebyb_button">
+              VER MAS
+            </a>
             <a href={programa.brochure} className="ebyb_info_container">
               <i className="fa-solid fa-info"></i>
             </a>

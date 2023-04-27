@@ -24,7 +24,9 @@ function Ecldp({ programa }) {
             <p>{programa.description}</p>
           </div>
           <div className="button_container">
-            <p className="ecdlp_button">AUSPICIAR</p>
+            <a href={programa.youtubeLink} className="ecdlp_button">
+              VER MAS
+            </a>
             <a href={programa.brochure} className="ecdlp_info_container">
               <i className="fa-solid fa-info"></i>
             </a>

@@ -26,7 +26,9 @@ function Ñoñoinos({ programa }) {
             <p className="ñoño_description">{programa.description}</p>
           </div>
           <div className="ñoño_button_container">
-            <a className="ñoño_button">AUSPICIAR</a>
+            <a href={programa.youtubeLink} className="ñoño_button">
+              VER MAS
+            </a>
             <a href={programa.brochure} className="ñoño_info_container">
               <i className="fa-solid fa-info"></i>
             </a>

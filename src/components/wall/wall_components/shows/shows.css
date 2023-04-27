@@ -84,13 +84,17 @@
   line-height: 42px;
   color: #ffffff;
 }
+.filters_container {
+  display: flex;
+}
 .month_filter {
   padding-top: 5px;
+  margin-right: 5px;
 }
 .month_filter_style {
   font-family: 'Jockey One';
   color: black;
-  height: 50px;
+  height: 45px;
   padding: 10px;
   width: 130px;
   font-size: 15px;
@@ -100,7 +104,6 @@
   transition: all 0.1s ease-in-out;
 }
 .month_filter_style:hover {
-  font-family: 'Jockey One';
   color: #ffffff;
   background: #ff3b56;
   border: 3px solid #00d6f2;
@@ -109,6 +112,37 @@
   transform: translateY(-4px);
 }
 .month_filter_style:active {
+  font-family: 'Jockey One';
+  color: #ffffff;
+  height: 50px;
+  padding: 10px;
+  width: 130px;
+  background: #ff3b56;
+  border: 3px solid #ffffff;
+  box-shadow: 3px 3px 1px #00d6f2;
+  border-radius: 15px;
+}
+.members_filter_style {
+  font-family: 'Jockey One';
+  color: black;
+  height: 45px;
+  padding: 10px;
+  width: 150px;
+  font-size: 15px;
+  background: white;
+  border: 2px solid #00d6f2;
+  border-radius: 15px;
+  transition: all 0.1s ease-in-out;
+}
+.members_filter_style:hover {
+  color: #ffffff;
+  background: #ff3b56;
+  border: 3px solid #00d6f2;
+  box-shadow: 2px 4px 1px #00d6f2;
+  transform: translateX(-2px);
+  transform: translateY(-4px);
+}
+.members_filter_style:active {
   font-family: 'Jockey One';
   color: #ffffff;
   height: 50px;

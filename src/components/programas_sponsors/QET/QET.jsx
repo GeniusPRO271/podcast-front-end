@@ -39,7 +39,9 @@ function Qet({ programa }) {
             </div>
           </div>
           <div className="qet_aus_button">
-            <a className="qet_button">AUSPICIAR</a>
+            <a href={programa.youtubeLink} className="qet_button">
+              VER MAS
+            </a>
             <a href={programa.brochure} className="qet_info_container">
               <i className="fa-solid fa-info"></i>
             </a>

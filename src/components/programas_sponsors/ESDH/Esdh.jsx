@@ -29,7 +29,9 @@ function Esdh({ programa }) {
           <div className="esdh_spotify_contaier"></div>
         </div>
         <div className="esdh_aus_button">
-          <a className="esdh_button">AUSPICIAR</a>
+          <a href={programa.youtubeLink} className="esdh_button">
+            VER MAS
+          </a>
           <a href={programa.brochure} className="esdh_info_container">
             <i className="fa-solid fa-info"></i>
           </a>

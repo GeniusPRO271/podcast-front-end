@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import Programas from './screens/programas/programas';
 import Auspicios from './screens/auspicios/auspicios';
 
 const router = createBrowserRouter([
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: 'auspiciar',
-    element: <Auspicios programas={await getSeries()} />,
+    path: 'programas',
+    element: <Programas programas={await getSeries()} />,
+  },
+  {
+    path: 'auspicios',
+    element: <Auspicios />,
   },
 ]);
 
