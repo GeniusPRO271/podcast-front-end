@@ -142,3 +142,27 @@
   height: 100%;
   color: #055abf;
 }
+
+@media only screen and (max-width: 768px) {
+  .text_container {
+    width: 90%;
+    padding: 0px 0px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .button_container {
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .ecdlp_left {
+    width: 40%;
+  }
+  .ecdlp_right {
+    padding: 20px;
+  }
+  .img_style {
+    object-fit: cover;
+  }
+}

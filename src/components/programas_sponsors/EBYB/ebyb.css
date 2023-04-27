@@ -172,3 +172,43 @@
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 768px) {
+  .ebyb_container {
+    height: auto;
+  }
+  .ebyb_layout {
+    flex-direction: column;
+  }
+  .ebyb_leftside {
+    width: 100%;
+  }
+  .ebyb_center {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .ebyb_rightside {
+    width: 100%;
+  }
+  .ebyb_description_container {
+    height: 100%;
+    padding-bottom: 50px;
+  }
+  .ebyb_top_row_imgs {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .ebyb_image_invitados_style {
+    width: 200px;
+    height: 230px;
+  }
+  .ebyb_image_invitados_style_1 {
+    border: 5px solid #f3e1b3;
+    border-radius: 25px;
+    width: 200px;
+    height: 230px;
+  }
+  .ebyb_bottom_row_imgs {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

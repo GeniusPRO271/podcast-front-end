@@ -2,8 +2,8 @@
   width: 100%;
 }
 .sponsors_container_2 {
-  margin-top: 10px;
   display: flex;
+  margin-top: 10px;
   width: 100%;
 }
 .left_column {
@@ -17,4 +17,19 @@
   width: 50%;
   flex-direction: column;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sponsors_container_2 {
+    flex-direction: column;
+  }
+  .left_column {
+    width: 100%;
+  }
+  .right_column {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
 }

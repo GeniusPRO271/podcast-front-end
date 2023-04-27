@@ -20,7 +20,7 @@ function Sponsosrs({ programas }) {
   return (
     <div className="sponsors_container">
       <Qet programa={qet} />
-      <div className="  sponsors_container_2">
+      <div className="sponsors_container_2">
         <div className="  left_column">
           <Ñoñoinos />
           <Ecldp programa={ecdlp} />
