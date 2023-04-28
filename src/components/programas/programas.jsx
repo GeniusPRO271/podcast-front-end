@@ -33,10 +33,7 @@ const Programas = ({ setVidBoxLink }) => {
         </div>
       </div>
       {series && (
-        <div
-          className="columns program_slider "
-          style={{ display: 'flex', flexDirection: 'row' }}
-        >
+        <div className="program_slider ">
           {series.map((d, index) => {
             return (
               <a
@@ -44,16 +41,12 @@ const Programas = ({ setVidBoxLink }) => {
                 onClick={() => {
                   programClick(d, index);
                 }}
-                className={`is-2 column  ${
-                  index !== 0 ? 'program_container_if_not_first' : ''
-                } ${
+                className={`${
                   clicked == index ? ' program_selected' : ' program_container'
                 }`}
                 id={`slide-${index}`}
               >
-                <figure className="image">
-                  <img src={d.imagesMain} className="image-cover" />
-                </figure>
+                <img src={d.imagesMain} className="image-cover" />
                 <div className="program_text_container">
                   <p className="program_description">
                     109 capitulos <br></br>

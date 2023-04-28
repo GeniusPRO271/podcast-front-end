@@ -194,21 +194,19 @@
     padding-bottom: 50px;
   }
   .ebyb_top_row_imgs {
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
   .ebyb_image_invitados_style {
-    width: 200px;
-    height: 230px;
+    width: 150px;
+    height: 180px;
   }
   .ebyb_image_invitados_style_1 {
-    border: 5px solid #f3e1b3;
-    border-radius: 25px;
-    width: 200px;
-    height: 230px;
+    width: 150px;
+    height: 180px;
   }
   .ebyb_bottom_row_imgs {
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 }

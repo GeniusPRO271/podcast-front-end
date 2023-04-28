@@ -145,10 +145,22 @@
 
 @media only screen and (max-width: 768px) {
   .text_container {
-    width: 90%;
+    width: 100%;
     padding: 0px 0px;
     font-size: 17px;
     line-height: 20px;
+  }
+  .ecdlp_button {
+    padding: 10px 20px;
+    background: #ffb745;
+    border: 3px solid #ffffff;
+    transition: all 0.1s ease-in-out;
+    border-radius: 40px;
+    font-family: 'Righteous Regular';
+    color: white;
+    -webkit-text-stroke: 1px #fd9cbd;
+    font-weight: 400;
+    font-size: 15px;
   }
   .button_container {
     margin-top: 30px;
@@ -157,10 +169,10 @@
     width: 100%;
   }
   .ecdlp_left {
-    width: 40%;
+    width: 50%;
   }
   .ecdlp_right {
-    padding: 20px;
+    padding: 10px;
   }
   .img_style {
     object-fit: cover;
