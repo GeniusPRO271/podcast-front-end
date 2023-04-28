@@ -1,0 +1,212 @@
+.ebyb_hidden {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+.ebyb_show {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1s ease;
+}
+
+.ebyb_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 679px;
+  margin-top: 30px;
+}
+.ebyb_layout {
+  background-color: #093f59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  height: 90%;
+  width: 100%;
+  border-radius: 30px;
+}
+.ebyb_leftside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+}
+.ebyb_center {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+}
+.ebyb_rightside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 40%;
+}
+.ebyb_image_style {
+  width: 400px;
+  border: 5px solid #fdf7dc;
+  filter: drop-shadow(4px 4px 1px #e4a01c);
+  border-radius: 62px;
+}
+.ebyb_description_container {
+  height: 50%;
+}
+.ebyb_description {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 37px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.ebyb_button_continer {
+  display: flex;
+  align-items: center;
+}
+.ebyb_button {
+  padding: 15px 40px;
+  background: #1a485f;
+  border: 3px solid #fdf7dc;
+  border-radius: 25px;
+  font-family: 'Abril Fatface';
+  color: #fcfffd;
+  font-weight: bolder;
+  transition: all 0.1s ease-in-out;
+}
+.ebyb_button:hover {
+  background: #fdf7dc;
+  border: 3px solid #e4a01d;
+  box-shadow: 2px 4px 1px #e4a01d;
+  border-radius: 25px;
+  font-family: 'Abril Fatface';
+  color: black;
+  font-weight: bolder;
+  transform: translateX(-2px);
+  transform: translateY(-4px);
+}
+.ebyb_button:active {
+  background: #fdf7dc;
+  border: 3px solid #e4a01d;
+  box-shadow: 1px 1px 1px #e4a01d;
+  border-radius: 25px;
+  font-family: 'Abril Fatface';
+  color: black;
+  transform: translateX(3px);
+  transform: translateY(1px);
+  font-weight: bolder;
+}
+.ebyb_info_container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #1a485f;
+  border: 3px solid #fdf7dc;
+  transition: all 0.1s ease-in-out;
+}
+.ebyb_info_container:hover {
+  background: #fdf7dc;
+  border: 3px solid #e4a01d;
+  box-shadow: 2px 3px 1px #e4a01d;
+  transform: translateX(-2px);
+  transform: translateY(-3px);
+}
+.ebyb_info_container:active {
+  background: #fdf7dc;
+  border: 3px solid #e4a01d;
+  box-shadow: 1px 1px 1px #e4a01d;
+  transform: translateX(0px);
+  transform: translateY(0px);
+}
+
+.ebyb_info_container i {
+  color: white;
+}
+.ebyb_info_container:hover i {
+  color: black;
+}
+.ebyb_title {
+  font-family: 'Abril Fatface';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 54px;
+  color: #ffffff;
+}
+.ebyb_top_row_imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ebyb_image_invitados_style {
+  border: 5px solid #ad882c;
+  border-radius: 25px;
+  width: 150px;
+  height: 180px;
+  margin: 10px;
+  object-fit: cover;
+}
+.ebyb_image_invitados_style_1 {
+  border: 5px solid #f3e1b3;
+  border-radius: 25px;
+  width: 150px;
+  height: 180px;
+  margin: 10px;
+  object-fit: cover;
+}
+.ebyb_bottom_row_imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .ebyb_container {
+    height: auto;
+  }
+  .ebyb_layout {
+    flex-direction: column;
+  }
+  .ebyb_leftside {
+    width: 100%;
+  }
+  .ebyb_center {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .ebyb_rightside {
+    width: 100%;
+  }
+  .ebyb_description_container {
+    height: 100%;
+    padding-bottom: 50px;
+  }
+  .ebyb_top_row_imgs {
+    justify-content: center;
+    width: 100%;
+  }
+  .ebyb_image_invitados_style {
+    width: 150px;
+    height: 180px;
+  }
+  .ebyb_image_invitados_style_1 {
+    width: 150px;
+    height: 180px;
+  }
+  .ebyb_bottom_row_imgs {
+    justify-content: center;
+    width: 100%;
+  }
+}

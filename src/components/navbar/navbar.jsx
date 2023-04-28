@@ -14,12 +14,7 @@ const Navbar = ({ setActiveWall }) => {
         </div>
         <ul className="nav-links">
           <li>
-            <a
-              target="_blank"
-              href="https://www.youtube.com/@elsentidodelhumorproducciones/podcasts"
-            >
-              Programas
-            </a>
+            <a href="/programas">Programas</a>
           </li>
           <li>
             <a
@@ -31,8 +26,8 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="https://www.patreon.com/elsentidodelhumor" target="_blank">
-              Patreon y Tienda
+            <a href="https://mokingskills.com/collections/esdh" target="_blank">
+              Tienda
             </a>
           </li>
           <li>
@@ -45,9 +40,18 @@ const Navbar = ({ setActiveWall }) => {
             </a>
           </li>
           <li>
-            <a href="#">Auspicios</a>
+            <a href="auspicios">Auspicios</a>
           </li>
         </ul>
+        <div className="patreon_button_container">
+          <a
+            href="https://www.patreon.com/elsentidodelhumor"
+            className="patreon_button"
+          >
+            <span className="button_text">CONTENIDO EXCLUSIVO</span>
+            <i className="fa-brands fa-patreon"></i>
+          </a>
+        </div>
       </nav>
       <nav className="navbar_mobile_content">
         <div className="navbar_mobile">
@@ -76,11 +80,7 @@ const Navbar = ({ setActiveWall }) => {
         >
           <ul className="nav-links_mobile">
             <li>
-              <a
-                style={{ opacity: !toggle && 1 }}
-                target="_blank"
-                href="https://www.youtube.com/@elsentidodelhumorproducciones"
-              >
+              <a style={{ opacity: !toggle && 1 }} href="/programas">
                 Programas
               </a>
             </li>
@@ -99,9 +99,9 @@ const Navbar = ({ setActiveWall }) => {
               <a
                 style={{ opacity: !toggle && 1 }}
                 target="_blank"
-                href="https://www.patreon.com/elsentidodelhumor"
+                href="https://mokingskills.com/collections/esdh"
               >
-                Patreon y Tienda
+                Tienda
               </a>
             </li>
             <li>
@@ -115,7 +115,7 @@ const Navbar = ({ setActiveWall }) => {
               </a>
             </li>
             <li>
-              <a style={{ opacity: !toggle && 1 }} href="#">
+              <a style={{ opacity: !toggle && 1 }} href="auspicios">
                 Auspicios
               </a>
             </li>
@@ -127,25 +127,3 @@ const Navbar = ({ setActiveWall }) => {
 };
 
 export default Navbar;
-{
-  /* <ul className="nav-links">
-        <li>
-          <a href="#">Programas</a>
-        </li>
-        <li>
-          <a href="#">Próximos Shows</a>
-        </li>
-        <li>
-          <a href="#">Últimos Videos</a>
-        </li>
-        <li>
-          <a href="#">Patreon y Tienda</a>
-        </li>
-        <li>
-          <a href="#">Contacto</a>
-        </li>
-        <li>
-          <a href="#">Auspicios</a>
-        </li>
-      </ul> */
-}

@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Jockey One';
+  src: url('../public/fonts/JockeyOne-Regular.ttf');
+}
+main {
+  margin-top: 20px;
+}
+.aus_buttons_container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+.aus_ack_arrow {
+  padding: 20px;
+}
+.aus_icon_container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #ff3b56;
+
+  transition: all 0.1s ease-in-out;
+}
+.aus_icon_container {
+  color: white;
+}
+.aus_icon_container:hover {
+  box-shadow: 2px 3px 1px #00d6f2;
+  border: 2px solid #00d6f2;
+  background-color: #ff3b56;
+  transform: translateX(-2px);
+  transform: translateY(-3px);
+}
+.aus_icon_container:hover i {
+  color: white;
+}
+.aus_icon_container:active {
+  box-shadow: 1px 1px 1px #00d6f2;
+  border: 2px solid #00d6f2;
+  background-color: #ff3b56;
+  transform: translateX(0px);
+  transform: translateY(0px);
+}
+.aus_patreon_button {
+  font-family: 'Jockey One';
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+
+  border: 1px solid #f96854;
+  background-color: white;
+  border-radius: 15px;
+  padding-right: 20px;
+  transition: all 0.1s ease-in-out;
+}
+.aus_patreon_button span {
+  color: #f96854;
+  padding-right: 5px;
+}
+.aus_patreon_button i {
+  color: #f96854;
+}
+.aus_patreon_button:hover span {
+  color: white;
+}
+.aus_patreon_button:hover i {
+  color: white;
+}
+.aus_patreon_button:hover {
+  border: 2px solid #052d49;
+  background-color: #f96854;
+  box-shadow: 2px 3px 1px #052d49;
+  transform: translateX(-2px);
+  transform: translateY(-3px);
+}
+.aus_patreon_button:active {
+  border: 1px solid #052d49;
+  background-color: #f96854;
+  box-shadow: 2px 3px 1px #052d49;
+  transform: translateX(px);
+  transform: translateY(1px);
+}
+
+.aus_patreon_button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #f96854;
+  background-color: white;
+  border-radius: 15px;
+  padding-right: 20px;
+}

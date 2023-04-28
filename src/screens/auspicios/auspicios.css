@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Jockey One';
+  src: url('../public/fonts/JockeyOne-Regular.ttf');
+}
+.images_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px;
+}
+
+.sponsor-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.spon_img_style {
+  width: 200px;
+  height: 200px;
+
+  object-fit: fill;
+}
+.spon_text {
+  font-family: 'Jockey One';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.spon_title {
+  color: white;
+  font-size: 50px;
+}
+.spon_description {
+  font-size: 25px;
+  color: gray;
+}
+
+@media screen and (max-width: 767px) {
+  .sponsor-logo-container {
+    width: 50%;
+  }
+  .spon_img_style {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 550px) {
+  .sponsor-logo-container {
+    width: 100%;
+  }
+  .spon_img_style {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+}

@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import './home.css';
-import Navbar from './components/navbar/navbar';
-import Programas from './components/programas/programas';
-import Social from './components/social/social';
-import Wall from './components/wall/wall';
-import Footer from './components/footer/footer';
+import Navbar from '../../components/navbar/navbar';
+import Programas from '../../components/programas/programas';
+import Social from '../../components/social/social';
+import Wall from '../../components/wall/wall';
+import Footer from '../../components/footer/footer';
 import YouTube from 'react-youtube';
 function Home() {
   const [vidBoxLink, setVidBoxLink] = useState(
-    'https://www.youtube.com/embed/videoseries?list=PLgSG7f4hM1f6trPdyPRQWjGUHXwax7JMR'
+    'https://www.youtube.com/playlist?list=PLgSG7f4hM1f574dIihVMQBwiy8tlQv_hk'
   );
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -43,7 +43,6 @@ function Home() {
 
   useEffect(() => {
     const navbar = document.querySelector('header');
-
     const handleScroll = () => {
       if (window.pageYOffset > 45) {
         navbar.classList.add('scrolled');
@@ -51,13 +50,11 @@ function Home() {
         navbar.classList.remove('scrolled');
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <div className="Home">
+    <div id="main_div">
       <header>
         <Navbar setActiveWall={setActiveWall} />
       </header>
@@ -65,7 +62,6 @@ function Home() {
         <div className="columns container_main">
           <div className="column is-7">
             <div className="vid-box columns">
-              {console.log(vidBoxLink)}
               <YouTube
                 videoId={getYoutubeVideoId(vidBoxLink.split('list=')[1])}
                 iframeClassName={`has-ratio ${
@@ -81,6 +77,7 @@ function Home() {
             </div>
             <Programas setVidBoxLink={setVidBoxLink} />
           </div>
+
           <Wall activeWall={activeWall} />
         </div>
       </main>

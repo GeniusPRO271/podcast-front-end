@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('../../../../public/fonts/Anton-Regular.ttf');
+}
+.esdh_hidden {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+.esdh_show {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1s ease;
+}
+.esdh_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px;
+  padding-top: 50px;
+}
+.esdh_layout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #d9d4ce;
+}
+.esdh_image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  border-radius: 50px;
+  border: 5px solid #ff7352;
+}
+.esdh_bottom_container {
+  display: flex;
+  height: 50%;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.esdh_image_style {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 50px;
+  width: 100%;
+}
+.esdh_aus_button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+}
+
+.esdh_button {
+  font-family: 'Anton';
+  background: #d9d4ce;
+  border: 5px solid #ff7352;
+  border-radius: 25px;
+  padding: 10px 40px;
+  transition: all 0.1s ease-in-out;
+  color: #ff7352;
+  font-size: 20px;
+}
+
+.esdh_button:hover {
+  font-family: 'Anton';
+  background: #00d6f2;
+  border: 5px solid #ff7352;
+  box-shadow: 2px 4px 1px #ff4f57;
+  border-radius: 25px;
+  color: white;
+  transform: translateX(-1px);
+  transform: translateY(-2px);
+}
+
+.esdh_button:active {
+  font-family: 'Anton';
+  border: 5px solid #ff7352;
+  box-shadow: 0px 1px 1px #ff4f57;
+  border-radius: 25px;
+  color: white;
+
+  transform: translateX(2px);
+  transform: translateY(3px);
+}
+.esdh_info_container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #d9d4ce;
+  border: 3px solid #ff7352;
+  transition: all 0.1s ease-in-out;
+}
+
+.esdh_info_container:hover {
+  background: #00d6f2;
+  border: 3px solid #ff7352;
+  box-shadow: 1px 3px 1px #ff4f57;
+
+  transform: translateX(0px);
+  transform: translateY(-2px);
+}
+.esdh_info_container:hover i {
+  color: white;
+}
+.esdh_info_container i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #ff7352;
+}
+.esdh_info_container:active {
+  border: 3px solid #ff7352;
+  box-shadow: 1px 0px 1px #ff4f57;
+  transform: translateY(1px);
+}
+.esdh_spotify_contaier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.esdh_spotify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.esdh_text_container {
+  display: flex;
+  flex-grow: 1;
+  width: 20%;
+  height: 100%;
+}
+.esdh_description {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15em;
+  color: #ff7352;
+}
+@media only screen and (max-width: 768px) {
+  .esdh_description {
+    padding: 20px 0px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #ff7352;
+  }
+}
