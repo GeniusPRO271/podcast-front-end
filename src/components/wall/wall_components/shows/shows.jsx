@@ -158,7 +158,7 @@ const Shows = ({ activeWall }) => {
                             show._id == isHoverIndex &&
                             isHover &&
                             'translate(-3px)',
-                          transition: 'all 0.3s ease',
+                          transition: 'all 0.1s ease',
                         }}
                         onMouseOver={() => {
                           setIsHover(true);
